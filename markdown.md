@@ -2,12 +2,12 @@
 
 Add number signs (**#**) in front of a word or phrase.
 
-- \ # Adds a heading level 1
-- \ ## Adds a heading level 2
-- \ ### Adds a heading level 3
-- \ #### Adds a heading level 4
-- \ ##### Adds a heading level 5
-- \ ###### Adds a heading level 6
+- # Adds a heading level 1
+- ## Adds a heading level 2
+- ### Adds a heading level 3
+- #### Adds a heading level 4
+- ##### Adds a heading level 5
+- ###### Adds a heading level 6
 
 > ####Note
 > - For compatibility, always put a space between the number signs and the heading name.
