@@ -17,9 +17,8 @@ Add number signs (*#*) in front of a word or phrase.
 
 ## Bold
 
-To bold text, add two asterisks or underscores before and after a word or phrase.  
-To bold the middle of a word for emphasis, add two asterisks without spaces  
-around the letters.
+To bold text, add two asterisks or underscores before and after a word or phrase. To bold the middle  
+of a word for emphasis, add two asterisks without spaces around the letters.
 
 - I just love **\*\*bold text\*\***.
 - I just love __\_\_bold text\_\___.
@@ -27,9 +26,8 @@ around the letters.
 
 ## Italic
 
-To italicize text, add one asterisk or underscore before and after a word or phrase.  
-To italicize the middle of a word for emphasis, add one asterisk without spaces  
-around the letters.
+To italicize text, add one asterisk or underscore before and after a word or phrase. To italicize the  
+middle of a word for emphasis, add one asterisk without spaces around the letters.
 
 - Italicized text is the *\*cat's meow\**.
 - Italicized text is the _\_cat's meow\__.
@@ -37,21 +35,21 @@ around the letters.
 
 ## Bold and Italic
 
-To emphasize text with bold and italics at the same time, add three asterisks or  
-underscores before and after a word or phrase. To bold and italicize the middle  
-of a word for emphasis, add three asterisks without spaces around the letters.
+To emphasize text with bold and italics at the same time, add three asterisks or underscores before  
+and after a word or phrase. To bold and italicize the middle of a word for emphasis, add three  
+asterisks without spaces around the letters.
 
 - This text is ***\*\*\*really important\*\*\****.
 - This text is ___\_\_\_really important\_\_\____.
 
 # Blockquotes
 
-To create a blockquote, add a > in front of a paragraph.  
-Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
+To create a blockquote, add a > in front of a paragraph. Blockquotes can be nested. Add a >> in front  
+of the paragraph you want to nest.
 
 > ### Note
-> Blockquotes can contain other Markdown formatted elements.  
-> Not all elements can be used — you’ll need to experiment to see which ones work.
+> Blockquotes can contain other Markdown formatted elements. Not all elements can be used — you’ll need  
+> to experiment to see which ones work.
 
 # Line Breaks
 
@@ -61,9 +59,8 @@ To create a line break or new line (\<br>), **end a line with two or more spaces
 
 ### Ordered Lists
 
-To create an ordered list, add line items with numbers followed by periods.  
-The numbers don’t have to be in numerical order, but the list should start  
-with the number one.
+To create an ordered list, add line items with numbers followed by periods. The numbers don’t have to be  
+in numerical order, but the list should start with the number one.
 
 1. 1. First item
 2. 2. Second item
@@ -75,8 +72,8 @@ with the number one.
 
 ### Unordered Lists
 
-To create an unordered list, add dashes (-), asterisks (*), or plus signs (+) in front of
-line items. Indent one or more items to create a nested list.
+To create an unordered list, add dashes (-), asterisks (*), or plus signs (+) in front of line items.  
+Indent one or more items to create a nested list.
 
 \- First item
 \- Second item
@@ -106,14 +103,14 @@ line items. Indent one or more items to create a nested list.
 
 To create a link, enclose the link text in brackets and then follow it immediately with the URL in parentheses.
 
-My favorite search engine is \[Duck Duck Go](https://duckduckgo.com).
-My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+My favorite search engine is \[Duck Duck Go](https://duckduckgo.com).  
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com).  
 
-You can optionally add a title for a link. This will appear as a tooltip when the user hovers 
-over the link. To add a title, enclose it in quotation marks after the URL.
+You can optionally add a title for a link. This will appear as a tooltip when the user hovers over the link.  
+To add a title, enclose it in quotation marks after the URL.  
 
-My favorite search engine is \[Duck Duck Go](https://duckduckgo.com "The best search engine for privacy"
-My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy"
+My favorite search engine is \[Duck Duck Go](https://duckduckgo.com "The best search engine for privacy"  
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com "The best search engine for privacy"  
 
 # Horizontal Rules
 
@@ -123,8 +120,8 @@ To create a horizontal rule, use three or more asterisks (***), dashes (---), or
 
 # Tables
 
-To add a table in Markdown, use the vertical line **|** to separate each column, and use three
-or more dashes **---** to create each column’s header. A vertical line should also be 
+To add a table in Markdown, use the vertical line **|** to separate each column, and use three  
+or more dashes **---** to create each column’s header. A vertical line should also be  
 added at either end of the row.
 
 > | Month    | Savings |
