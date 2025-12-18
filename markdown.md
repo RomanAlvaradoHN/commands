@@ -93,12 +93,10 @@ first three backticks, you must indicate the code language name with [language-n
 \`dnf install -y git\`   
 `dnf install -y git`
 
-
+  
 \```[language-name]  
 // Code goes here  
 \```  
-
-
 ```[python]
 def hello_world():
    print("Hello, world!")
