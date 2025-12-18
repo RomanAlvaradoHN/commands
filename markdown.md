@@ -119,13 +119,6 @@ To create a link, enclose the link text in brackets and then follow it immediate
 My favorite search engine is \[Duck Duck Go](https://duckduckgo.com).  
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 
-
-You can optionally add a title for a link. This will appear as a tooltip when the user hovers over the link.  
-To add a title, enclose it in quotation marks after the URL.  
-
-My favorite search engine is \[Duck Duck Go](https://duckduckgo.com)\"The best search engine for privacy"  
-My favorite search engine is [Duck Duck Go](https://duckduckgo.com)"The best search engine for privacy"  
-
 # Horizontal Rules
 
 To create a horizontal rule, use three or more asterisks (***), dashes (---), or underscores (___) on a line by themselves.
