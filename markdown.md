@@ -62,42 +62,43 @@ To create a line break or new line (\<br>), **end a line with two or more spaces
 To create an ordered list, add line items with numbers followed by periods. The numbers don’t have to be  
 in numerical order, but the list should start with the number one.
 
-1. \1. First item
-2. \2. Second item
-3. \3. Third item 
+1. 1\. First item
+2. 2\. Second item
+3. 3\. Third item 
 
-\1. First item
-\1. Second item
-\1. Third item
+1. 1\. First item
+2. 1\. Second item
+3. 1\. Third item
 
 ### Unordered Lists
 
 To create an unordered list, add dashes (-), asterisks (*), or plus signs (+) in front of line items.  
 Indent one or more items to create a nested list.
 
-\- First item
-\- Second item
-\- Third item
+- \- First item
+- \- Second item
+- \- Third item
 
-\* First item
-\* Second item
-\* Third item
+* \* First item
+* \* Second item
+* \* Third item
 
-\+ First item
-\+ Second item
-\+ Third item
++ \+ First item
++ \+ Second item
++ \+ Third item
 
 # Code Blocks
 
 - Code blocks are normally indented four spaces or one tab. When they’re in a list, indent them eight spaces or two tabs.
-- To denote a word or phrase as code, enclose it in backticks (**`**).
+- To denote a word or phrase as code, enclose it in backticks ( ` ).
 
 
 
 # Images
 
-\![Tux, the Linux mascot](/assets/images/tux.png)
-![Tux, the Linux mascot](/assets/images/tux.png)
+\!\[Black shy guy](https://mario.wiki.gallery/images/c/cd/MKT_Artwork_BlackShyGuy.png)  
+![Black shy guy](https://mario.wiki.gallery/images/c/cd/MKT_Artwork_BlackShyGuy.png)
+
 
 # Links
 
