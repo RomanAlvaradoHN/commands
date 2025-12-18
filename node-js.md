@@ -24,7 +24,7 @@ This way will install the latest version of the major version number "22".
 > ```[bash]
 > nvm current
 > ```
-> output:
+> output:  
 > v14.21.3
 
 # Switching Node Versions with NVM
@@ -63,7 +63,7 @@ from the .nvmrc file and switch to that version automatically.
 > nvm use
 > ```
 > output:  
-> Found '/path/to/project/.nvmrc' with version <16.14.0>
+> Found '/path/to/project/.nvmrc' with version <16.14.0>  
 > Now using node v16.14.0 (npm v8.3.1)
 
 # Summary `nvm use` Command Parameters
