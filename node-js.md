@@ -9,20 +9,23 @@ nvm --version
 
 # Installing Node Versions with NVM
 
-Command: **`nvm install <node>`**  
+Command:  
+`nvm install <node>`
 
 Example:  
 `nvm install 22.2.0`
 
 or  
-`nvm install 22` This way will install the latest version of the major version number "22".
+
+`nvm install 22`  
+This way will install the latest version of the major version number "22".
 
 # Checking the current version
 > ```[bash]
 > nvm current
 > ```
 > output:
->> v14.21.3
+> v14.21.3
 
 # Switching Node Versions with NVM
 
@@ -36,8 +39,8 @@ The most basic command is **`nvm use <node>`**, which allows you to activate an 
 > ```[bash]
 > nvm use 24.0.2
 > ```
->> output:  
->> Now using node v24.0.2
+> output:  
+> Now using node v24.0.2
 
 #### Note:  
 You can just specify the major version number, and NVM will use the latest installed  
@@ -45,8 +48,8 @@ version of that major version.
 > ```[bash]
 > nvm use 14
 > ```
->> output:  
->> Now using node v14.21.3 (npm v6.14.18)
+> output:  
+> Now using node v14.21.3 (npm v6.14.18)
 
 ### Automatic Version Switching with .nvmrc Files
 
@@ -59,15 +62,15 @@ from the .nvmrc file and switch to that version automatically.
 > echo "16.14.0" > .nvmrc
 > nvm use
 > ```
->> output:  
->> Found '/path/to/project/.nvmrc' with version <16.14.0>
->> Now using node v16.14.0 (npm v8.3.1)
+> output:  
+> Found '/path/to/project/.nvmrc' with version <16.14.0>
+> Now using node v16.14.0 (npm v8.3.1)
 
 # Summary `nvm use` Command Parameters
 
 | Parameter  | Description                                                 |
 | :--------  | :---------------------------------------------------------- |
-| <version> | Specifies the Node.js version to use      |
+| \<version> | Specifies the Node.js version to use      |
 | node       | Uses the latest version of Node.js        |
 | lts/*      | Uses the latest long-term support version |
-| lts/<name> | Uses a specific long-term support version |
+| lts/\<name> | Uses a specific long-term support version |
