@@ -31,7 +31,7 @@ middle of a word for emphasis, add one asterisk without spaces around the letter
 
 - Italicized text is the *\*cat's meow\**.
 - Italicized text is the _\_cat's meow\__.
-- A*\*cat\**meow
+- A *\*cat\** meow
 
 ## Bold and Italic
 
@@ -45,10 +45,12 @@ without spaces around the letters.
 # Blockquotes
 
 To create a blockquote, add a **>** in front of a paragraph.
+
 Blockquotes can be nested. Add a **>>** in front of the paragraph you want to nest.
 
-> ###Note
-> Blockquotes can contain other Markdown formatted elements. Not all elements can be used — you’ll need to experiment to see which ones work.
+> ### Note
+> Blockquotes can contain other Markdown formatted elements.
+> Not all elements can be used — you’ll need to experiment to see which ones work.
 
 # Lists
 
