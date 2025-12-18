@@ -19,7 +19,7 @@ Add number signs (*#*) in front of a word or phrase.
 
 To bold text, add two asterisks or underscores before and after a word or phrase. To bold the middle  
 of a word for emphasis, add two asterisks without spaces around the letters.
-
+<!-- I just love **bold text**. -->
 - I just love **\*\*bold text\*\***.
 - I just love __\_\_bold text\_\___.
 - Love **\*\*is\*\*** bold
@@ -28,7 +28,7 @@ of a word for emphasis, add two asterisks without spaces around the letters.
 
 To italicize text, add one asterisk or underscore before and after a word or phrase. To italicize the  
 middle of a word for emphasis, add one asterisk without spaces around the letters.
-
+<!-- Italicized text is the *cat's meow*. -->
 - Italicized text is the *\*cat's meow\**.
 - Italicized text is the _\_cat's meow\__.
 - A *\*cat\** meow
@@ -38,7 +38,7 @@ middle of a word for emphasis, add one asterisk without spaces around the letter
 To emphasize text with bold and italics at the same time, add three asterisks or underscores before  
 and after a word or phrase. To bold and italicize the middle of a word for emphasis, add three  
 asterisks without spaces around the letters.
-
+<!-- This text is ***really important***. -->
 - This text is ***\*\*\*really important\*\*\****.
 - This text is ___\_\_\_really important\_\_\____.
 
@@ -61,7 +61,11 @@ To create a line break or new line (\<br>), **end a line with two or more spaces
 
 To create an ordered list, add line items with numbers followed by periods. The numbers don’t have to be  
 in numerical order, but the list should start with the number one.
-
+<!--
+   1. First item
+   2. Second item
+   3. Third item
+-->
 1. First item
 2. Second item
 3. Third item
@@ -70,7 +74,11 @@ in numerical order, but the list should start with the number one.
 
 To create an unordered list, add dashes (-), asterisks (*), or plus signs (+) in front of line items.  
 Indent one or more items to create a nested list.
-
+<!--
+   - First item
+   - Second item
+   - Third item
+-->
 - First item
 - Second item
 - Third item
@@ -95,6 +103,7 @@ To create a link, enclose the link text in brackets and then follow it immediate
 
 My favorite search engine is \[Duck Duck Go](https://duckduckgo.com).  
 - My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+
 
 You can optionally add a title for a link. This will appear as a tooltip when the user hovers over the link.  
 To add a title, enclose it in quotation marks after the URL.  
