@@ -46,8 +46,8 @@ of a word for emphasis, add three asterisks without spaces around the letters.
 
 # Blockquotes
 
-To create a blockquote, add a **>** in front of a paragraph.  
-Blockquotes can be nested. Add a **>>** in front of the paragraph you want to nest.
+To create a blockquote, add a > in front of a paragraph.  
+Blockquotes can be nested. Add a >> in front of the paragraph you want to nest.
 
 > ### Note
 > Blockquotes can contain other Markdown formatted elements.  
@@ -55,7 +55,7 @@ Blockquotes can be nested. Add a **>>** in front of the paragraph you want to ne
 
 # Line Breaks
 
-To create a line break or new line (<br>), **end a line with two or more spaces, and then type return**.
+To create a line break or new line (\<br>), **end a line with two or more spaces, and then type return**.
 
 # Lists
 
