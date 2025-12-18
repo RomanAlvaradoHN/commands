@@ -88,8 +88,9 @@ Indent one or more items to create a nested list.
 - Code blocks are normally indented four spaces or one tab. When they’re in a list, indent them eight spaces or two tabs.
 - To denote a word or phrase as code, enclose it in backticks ( ` ).
 
-\`dnf install -y git`
-        `dnf install -y git`
+\`dnf install -y git`   
+`dnf install -y git`
+
 
 - You can also use three consecutive backticks to create a multiline code bock.
 
@@ -97,10 +98,10 @@ Indent one or more items to create a nested list.
 // Code goes here  
 \```  
 
-      ```[python]
-      def hello_world():
-         print("Hello, world!")
-      ```
+```[python]
+def hello_world():
+   print("Hello, world!")
+```
 
 
 
