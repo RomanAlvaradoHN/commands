@@ -89,18 +89,18 @@ Indent one or more items to create a nested list.
 - To denote a word or phrase as code, enclose it in backticks ( ` ).
 
 \`dnf install -y git`
-`dnf install -y git`
+        `dnf install -y git`
 
 - You can also use three consecutive backticks to create a multiline code bock.
 
 \```[language-name]  
-// Code goes here
+// Code goes here  
 \```  
 
-```[python]
-def hello_world():
-   print("Hello, world!")
-```
+      ```[python]
+      def hello_world():
+         print("Hello, world!")
+      ```
 
 
 
