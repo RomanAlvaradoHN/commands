@@ -62,30 +62,18 @@ To create a line break or new line (\<br>), **end a line with two or more spaces
 To create an ordered list, add line items with numbers followed by periods. The numbers don’t have to be  
 in numerical order, but the list should start with the number one.
 
-1.  (1. First item)
-2.  (2. Second item)
-3.  (3. Third item )
-
-1.  (1. First item)
-2.  (1. Second item)
-3.  (1. Third item)
+1. First item
+2. Second item
+3. Third item
 
 ### Unordered Lists
 
 To create an unordered list, add dashes (-), asterisks (*), or plus signs (+) in front of line items.  
 Indent one or more items to create a nested list.
 
--  (- First item)
--  (- Second item)
--  (- Third item)
-
-*  (* First item)
-*  (* Second item)
-*  (* Third item)
-
-+  (+ First item)
-+  (+ Second item)
-+  (+ Third item)
+- First item
+- Second item
+- Third item
 
 # Code Blocks
 
@@ -133,10 +121,10 @@ To add a table in Markdown, use the vertical line | to separate each column, and
 or more dashes --- to create each column’s header. A vertical line should also be  
 added at either end of the row.
 
-\| Month    | Savings |
-\| -------- | ------- |
-\| January  | $250    |
-\| February | $80     |
+\| Month    | Savings |  
+\| -------- | ------- |  
+\| January  | $250    |  
+\| February | $80     |  
 \| March    | $420    |
 
 | Month    | Savings |
@@ -147,12 +135,12 @@ added at either end of the row.
 
 or
 
-\| Item              | In Stock | Price |
-\| :---------------- | :------: | ----: |
-\| Python Hat        |   True   | 23.99 |
-\| SQL Hat           |   True   | 23.99 |
-\| Codecademy Tee    |  False   | 19.99 |
-\| Codecademy Hoodie |  False   | 42.99 |
+\| Item              | In Stock | Price |  
+\| :---------------- | :------: | ----: |  
+\| Python Hat        |   True   | 23.99 |  
+\| SQL Hat           |   True   | 23.99 |  
+\| Codecademy Tee    |  False   | 19.99 |  
+\| Codecademy Hoodie |  False   | 42.99 |  
 
 
 | Item              | In Stock | Price |
