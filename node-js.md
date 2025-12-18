@@ -53,10 +53,9 @@ version of that major version.
 
 ### Automatic Version Switching with .nvmrc Files
 
-Create a file named **.nvmrc** in your project's root directory with the Node.js version  
-number as its content.
-Then, simply run the **`nvm use`** command (without arguments), and NVM will read the version  
-from the .nvmrc file and switch to that version automatically.
+Create a file named `.nvmrc` in your project's root directory with the Node.js version number as its content.  
+Then, simply run the `nvm use` command (without arguments), and NVM will read the version  
+from the **.nvmrc** file and switch to that version automatically.
 
 > ```[bash]
 > echo "16.14.0" > .nvmrc
