@@ -30,7 +30,7 @@ source ~/.bashrc
 ```
     
 
-### COMMANDS
+# COMMANDS
 
 - Add a profile:  
 `aws-vault add [profile-name]`
