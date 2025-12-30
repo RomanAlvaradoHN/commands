@@ -45,7 +45,11 @@ asterisks without spaces around the letters.
 # Blockquotes
 
 To create a blockquote, add a > in front of a paragraph. Blockquotes can be nested. Add a >> in front  
-of the paragraph you want to nest.
+of the paragraph you want to nest. Example:  
+
+\> ### Note
+\> Blockquotes can contain other Markdown formatted elements. Not all elements can be used — you’ll need  
+\> to experiment to see which ones work.
 
 > ### Note
 > Blockquotes can contain other Markdown formatted elements. Not all elements can be used — you’ll need  
@@ -61,11 +65,7 @@ To create a line break or new line (\<br>), **end a line with two or more spaces
 
 To create an ordered list, add line items with numbers followed by periods. The numbers don’t have to be  
 in numerical order, but the list should start with the number one.
-<!--
-   1. First item
-   2. Second item
-   3. Third item
--->
+
 1. First item
 2. Second item
 3. Third item
@@ -74,11 +74,7 @@ in numerical order, but the list should start with the number one.
 
 To create an unordered list, add dashes (-), asterisks (*), or plus signs (+) in front of line items.  
 Indent one or more items to create a nested list.
-<!--
-   - First item
-   - Second item
-   - Third item
--->
+
 - First item
 - Second item
 - Third item

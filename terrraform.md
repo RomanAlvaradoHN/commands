@@ -1,20 +1,50 @@
-# Set up a connection
+# Terraform Version Manager
 
-## 
+Go to [this link](https://github.com/tfutils/tfenv) to see the most recent instructions.
 
-# validate what action we are going to perform 
+##  Installation Steps
 
-terraform plan
+1. Clone the repository:  
+`git clone --depth=1 https://github.com/tfutils/tfenv.git ~/.tfenv`
 
-# To applicate a terraform script (it will prompt to confirm changes) 
+2. Add the environment variable:  
+`echo 'export PATH="$PATH:$HOME/.tfenv/bin"' >> ~/.bashrc`
 
-terraform apply
+3. Apply the environment variable:  
+`source ~/.bashrc`
 
-# To destroy a service or resource
+4. Verify the installation:  
+`tfenv --version`
 
-terraform destroy
 
-# To make tracking of a terraform resource and amazon resource
+## Usage
 
-terraform import <recurso_en_terraform> <id_recurso_en_aws>
+- Install a specific version of Terraform:  
+`tfenv install [version]`
 
+#### Parameters options:
+| Parameter      | Meaning                                                                 |
+| :-----------   | :------                                                                 |
+| x.y.z          | String specifying the exact version to install                          |
+| latest         | Install the latest version                                              |
+| latest-allowed | Scan your Terraform files to detect which version is maximally allowed  |
+| min-required   | Scan your Terraform files to detect which version is minimally required |
+| latest:<regex> | Install latest version matching regex (used by grep -e)                 |
+
+
+> #### NOTE
+> If no parameter is passed, the version to use is resolved automatically via:  
+> 1. **TFENV_TERRAFORM_VERSION** environment variable
+> 2. **.terraform-version** file
+> The default is '**latest**' if none are found.
+
+___
+
+# TERRAFORM COMMANDS
+
+| Command           | Meaning                                          |
+| :------           | :------                                          |
+| terraform plan    | To validate what actions we are going to perform |
+| terraform apply   | To applicate changes                             |
+| terraform destroy | To destroy a service or resource                 |
+| terraform import  | To import as a terraform file an amazon resource |
