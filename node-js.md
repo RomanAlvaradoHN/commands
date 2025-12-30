@@ -8,9 +8,9 @@ Go to [this link](https://www.nvmnode.com/guide/installation.html) to see the mo
 `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
 
 2. Add the environment variables:  
-> `echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc`  
-> `echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc`  
-> `echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc`  
+`echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc`  
+`echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc`  
+`echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc`  
 
 3. Restart the shell:  
 `source ~/.bashrc`
@@ -50,5 +50,5 @@ Create a file named `.nvmrc` in your project's root directory with the Node.js v
 Then, simply run the `nvm use` command (without arguments), and NVM will read the version from the `.nvmrc`  
 file and switch to that version automatically.  
 
-> `echo "16.14.0" >> .nvmrc`  
-> `nvm use`
+> echo "16.14.0" >> .nvmrc
+> nvm use
