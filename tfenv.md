@@ -1,6 +1,6 @@
 # Terraform Version Manager
 
-Go to [this link](https://github.com/tfutils/tfenv) to see the last instructions.
+Go to [this link](https://github.com/tfutils/tfenv) to see the most recent instructions.
 
 ##  Installation Steps
 
