@@ -17,23 +17,20 @@ Go to [this link](https://docs.aws.amazon.com/en_us/cli/latest/userguide/getting
 5. Add the environment variable:  
 `export AWS_VAULT_BACKEND=file >> ~/.bashrc`
 
-6. Verify the installation:  
+6. Restart the shell:  
+`source ~/.bashrc`
+
+7. Verify installation:  
 `aws --version`
 
-### Optional steps
+8. create commands aliases (optional):  
+`echo "alias av='aws-vault' >> ~/.bashrc`  
+`echo "alias ave='aws-vault exec' >> ~/.bashrc`  
+`source ~/.bashrc`
 
-7. customize commands:  
-```[bash]
-echo "alias av='aws-vault' >> ~/.bashrc
-echo "alias ave='aws-vault exec' >> ~/.bashrc
-source ~/.bashrc
-```
-    
+## AWS-CLI COMMANDS
 
-# COMMANDS
-
-- Add a profile:  
-`aws-vault add [profile-name]`
-
-- Set up a profile session:  
-`aws-vault exec [profile-name] --duration=[hours]h`
+| Command                                             |Meaning                                      |
+| :------                                             | :------                                     |
+| `aws-vault add [profile-name]`                      | Adds a profile to the vault                 |
+| `aws-vault exec [profile-name] --duration=[hours]h` | Set up a profile session                    |
