@@ -9,10 +9,10 @@ Go to [this link](https://docs.docker.com/engine/install/) to see the most recen
 
 2. Set up Docker's apt repository:  
 `sudo apt update`  
-`sudo apt install ca-certificates curl`
-`sudo install -m 0755 -d /etc/apt/keyrings`
-`sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc`
-`sudo chmod a+r /etc/apt/keyrings/docker.asc`
+`sudo apt install ca-certificates curl`  
+`sudo install -m 0755 -d /etc/apt/keyrings`  
+`sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc`  
+`sudo chmod a+r /etc/apt/keyrings/docker.asc`  
   
 `sudo tee /etc/apt/sources.list.d/docker.sources <<EOF  
 Types: deb  
