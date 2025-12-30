@@ -34,21 +34,21 @@ Go to [this link](https://www.nvmnode.com/guide/installation.html) to see the mo
 
 Just specify the major version number, and NVM **will use or install the latest** version  
 of that major version. Example:  
-> $ nvm use 14
+> $ nvm use 14  
 > Using node v14.17.6 (npm v6.14.15)
 
 #### Parameters options:
-| Parameter           | Meaning               |
-| :-----------        | :------               |
-| node                | Latest stable version |
-| lts/*               | Latest LTS version    |
-| lsts/\[lts-version] | Specific LTS version  |
+| Parameter          | Meaning               |
+| :-----------       | :------               |
+| node               | Latest stable version |
+| lts/*              | Latest LTS version    |
+| lts/\[lts-version] | Specific LTS version  |
 
 ## Automatic Version Switching with **.nvmrc** Files
 
-Create a file named `.nvmrc` in your project's root directory with the Node.js version number as its content. 
-Then, simply run the `nvm use` command (without arguments), and NVM will read the version  
-from the `.nvmrc` file and switch to that version automatically.  
+Create a file named `.nvmrc` in your project's root directory with the Node.js version number as its content.  
+Then, simply run the `nvm use` command (without arguments), and NVM will read the version from the `.nvmrc`  
+file and switch to that version automatically.  
 
-`echo "16.14.0" >> .nvmrc`
+`echo "16.14.0" >> .nvmrc`  
 `nvm use`
