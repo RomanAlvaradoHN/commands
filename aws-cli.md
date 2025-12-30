@@ -1,4 +1,6 @@
-# Installation Steps
+# AWS-CLI
+
+## Installation Steps
 
 Go to [this link](https://docs.aws.amazon.com/en_us/cli/latest/userguide/getting-started-install.html) to see the most recent information.
 
