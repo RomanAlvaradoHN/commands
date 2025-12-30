@@ -1,75 +1,54 @@
-# Install nvm (Node Version Manager)
+# Node Version Manager
 
-Go to [NVM Documentation](https://www.nvmnode.com/guide/installation.html) to get the last version.
-```[bash]
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-source ~/.bashrc
-nvm --version
-```
+Go to [this link](https://www.nvmnode.com/guide/installation.html) to see the most recent instructions.
 
-# Installing Node Versions with NVM
+##  Installation Steps
 
-Command:  
-`nvm install <node>`
+1. Get the required files:  
+`curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash`
 
-Example:  
-`nvm install 22.2.0`
+2. Add the environment variables:  
+> `echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc`  
+> `echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc`  
+> `echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc`  
 
-or  
+3. Restart the shell:  
+`source ~/.bashrc`
 
-`nvm install 22`  
-This way will install the latest version of the major version number "22".
+4. Verify installation:  
+`nvm --version`
 
-# Checking the current version
-> ```[bash]
-> nvm current
-> ```
-> output:  
-> v14.21.3
 
-# Switching Node Versions with NVM
+## NVM COMMANDS
 
-### List Available Node Versions
+| Command                       | Meaning                                                        |
+| :------                       | :------                                                        |
+| `nvm install [version]`       | To install Node.js version                                     |
+| `nvm use [version]`           | Switch to the node-js specified version                        |
+| `nvm alias default [version]` | Set a default Node.js version that will be automatically used. |
+| `nvm current`                 | To check which Node.js version is currently being used         |
+| `nvm ls`                      | To see what Node.js versions are installed.                    |
 
-Before switching, you can use the **`nvm ls`** command to see what Node.js versions are installed.
 
-NVM provides simple yet powerful commands to switch between different Node.js versions.  
-The most basic command is **`nvm use <node>`**, which allows you to activate an installed Node.js version.
+#### Note: The Major Version Number.
 
-> ```[bash]
-> nvm use 24.0.2
-> ```
-> output:  
-> Now using node v24.0.2
+Just specify the major version number, and NVM **will use or install the latest** version  
+of that major version. Example:  
+> $ nvm use 14
+> Using node v14.17.6 (npm v6.14.15)
 
-#### Note:  
-You can just specify the major version number, and NVM will use the latest installed  
-version of that major version.
-> ```[bash]
-> nvm use 14
-> ```
-> output:  
-> Now using node v14.21.3 (npm v6.14.18)
+#### Parameters options:
+| Parameter           | Meaning               |
+| :-----------        | :------               |
+| node                | Latest stable version |
+| lts/*               | Latest LTS version    |
+| lsts/\[lts-version] | Specific LTS version  |
 
-### Automatic Version Switching with .nvmrc Files
+## Automatic Version Switching with **.nvmrc** Files
 
-Create a file named `.nvmrc` in your project's root directory with the Node.js version number as its content.  
+Create a file named `.nvmrc` in your project's root directory with the Node.js version number as its content. 
 Then, simply run the `nvm use` command (without arguments), and NVM will read the version  
-from the **.nvmrc** file and switch to that version automatically.
+from the `.nvmrc` file and switch to that version automatically.  
 
-> ```[bash]
-> echo "16.14.0" > .nvmrc
-> nvm use
-> ```
-> output:  
-> Found '/path/to/project/.nvmrc' with version <16.14.0>  
-> Now using node v16.14.0 (npm v8.3.1)
-
-# Summary `nvm use` Command Parameters
-
-| Parameter  | Description                                                 |
-| :--------  | :---------------------------------------------------------- |
-| \<version> | Specifies the Node.js version to use      |
-| node       | Uses the latest version of Node.js        |
-| lts/*      | Uses the latest long-term support version |
-| lts/\<name> | Uses a specific long-term support version |
+`echo "16.14.0" >> .nvmrc`
+`nvm use`
