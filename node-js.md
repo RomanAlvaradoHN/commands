@@ -24,7 +24,7 @@ Go to [this link](https://www.nvmnode.com/guide/installation.html) to see the mo
 | Command                       | Meaning                                                        |
 | :------                       | :------                                                        |
 | `nvm install [version]`       | To install Node.js version                                     |
-| `nvm use [version]`           | Switch to the node-js specified version                        |
+| `nvm use [version]`           | Switch to the Node-js specified version                        |
 | `nvm alias default [version]` | Set a default Node.js version that will be automatically used. |
 | `nvm current`                 | To check which Node.js version is currently being used         |
 | `nvm ls`                      | To see what Node.js versions are installed.                    |
@@ -50,5 +50,5 @@ Create a file named `.nvmrc` in your project's root directory with the Node.js v
 Then, simply run the `nvm use` command (without arguments), and NVM will read the version from the `.nvmrc`  
 file and switch to that version automatically.  
 
-`echo "16.14.0" >> .nvmrc`  
-`nvm use`
+> `echo "16.14.0" >> .nvmrc`  
+> `nvm use`
