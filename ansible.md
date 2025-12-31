@@ -9,14 +9,13 @@ Go to [this link](https://docs.ansible.com/projects/ansible/latest/installation_
 `python3 -m pip -V`
 
 2. Install Ansible:  
-
 | Command                                            | Description                                                   |
 | :------                                            | :----------                                                   |
 | python3 -m pip install --user ansible              | Install the full Ansible package for the current user         |
 | python3 -m pip install --user ansible-core         | Install the minimal ansible-core package for the current user |
 | python3 -m pip install --user ansible-core==2.12.3 | Install a specific version of ansible-core                    |
 
-3. Verify Installation
+3. Verify Installation:  
 `ansible --version`
 
 
