@@ -11,6 +11,7 @@ The connection string, uses the format: **<username>:<password>@<host>**
 
 # Create User
 ```[json]
+use <database-name>;
 db.createUser(
   {
     user: "<username>",
