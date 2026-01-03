@@ -15,6 +15,12 @@ create user [username] with login;
 grant connect on database [database] to [username];  
 ```
 
+# GRANT USAGE TO A SCHEMA
+
+``` sql
+grant usage on schema [schema_name] to [username];
+```
+
 # GRANT PRIVILEGES TO A USER
 
 ``` sql
