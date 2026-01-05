@@ -84,7 +84,7 @@ from
 where
 	d.datistemplate   = false 
 	and r.rolcanlogin = true
-	and r.rolname     = coalesce(:user_name, r.rolname)
+	and r.rolname     = [rolename]
 order by
 	username
 ;
