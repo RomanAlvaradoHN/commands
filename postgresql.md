@@ -72,8 +72,9 @@ Roles can own database objects (for example, tables and functions) and can assig
 
 # CUSTOM QUERIES
 
-- To see users and which databses they are allowed to connect:  
+
 ``` sql
+--To see users and which databses they are allowed to connect:
 select 
     r.rolname  as username
     ,d.datname as database
@@ -84,14 +85,15 @@ where
 	has_database_privilege(r.rolname, d.datname, 'CONNECT') = true
 	and d.datistemplate = false 
 	and r.rolcanlogin   = true
-	and r.rolname       = [rolename]
+	and r.rolname       = '[rolename]'
 order by
 	username
 ;
 ```
 
-- To see user CRUD permissions on tables:  
+
 ``` sql
+--To see user CRUD permissions on tables:
 select 
     grantee        as rolename,
     table_schema   as schema,
@@ -105,8 +107,9 @@ where
 ;
 ```
 
-- To see user membership:  
+
 ``` sql
+--To see user membership:
 select 
 	u.rolname  as rolename
     ,m.rolname as group  
