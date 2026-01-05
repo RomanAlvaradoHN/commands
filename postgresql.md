@@ -7,9 +7,9 @@ Roles can own database objects (for example, tables and functions) and can assig
 
 **The concept of roles subsumes the concepts of “users” and “groups”.** In PostgreSQL versions before 8.1, users and groups were distinct kinds of entities, but now there are only roles. Any role can act as a user, a group, or both.
 
-## User Creation Commands
+## Role Management Commands
 
-1. Create role:  
+1. ## Create role:  
 `create role [rolename];`  
 `create role [rolename] LOGIN;`  
 `create user [rolename];`  this command includes the LOGIN privilege by default.  
@@ -19,23 +19,32 @@ Roles can own database objects (for example, tables and functions) and can assig
 	> Only roles that have the **LOGIN** attribute can be used as the initial role name for a database connection.  
 	> A role with the LOGIN attribute can be considered the same as a “database user”.
 
-2. Remove an existing role:  
+2. ## Remove an existing role:  
 `drop role [rolename]`
 
 3. To determine the set of existing roles, examine the `pg_roles` system catalog:  
 `select * from pg_roles;`
 
+4. ## Role Membership:  
+It is frequently convenient to group users together to ease management of privileges: that way, privileges  
+can be granted to, or revoked from, a group as a whole.  
+PostgreSQL this is done by creating a role that represents the group, and then granting membership in the  
+group role to individual user roles.
+
+#### To set up a group role:
+
+1. Create the role:  
+	`create role [rolename];`  
+
+	Typically a role being used as a group would not have the LOGIN attribute, though you can set it if you  wish.
+
+2. Once the group role exists, you can add and remove members using the GRANT and REVOKE commands:  
+	`grant [group_role] to [rolename];`  
+	`revoke [group_role] from [rolename];`  
 
 
 
 
-``` sql
---create user and password (implicit login)
-create user [username] with password [password];  
-
---create user without password.
-create user [username] with login;  
-```
 
 
 # GRANT CONNECT TO A DATABASE
