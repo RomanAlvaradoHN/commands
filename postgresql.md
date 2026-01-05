@@ -77,12 +77,12 @@ Roles can own database objects (for example, tables and functions) and can assig
 select 
     r.rolname  as username
     ,d.datname as database
-	,has_database_privilege(r.rolname, d.datname, 'CONNECT') as has_connect
 from
 	pg_database         d
 	cross join pg_roles r
 where
-	d.datistemplate   = false 
+	,has_database_privilege(r.rolname, d.datname, 'CONNECT') = false
+	and d.datistemplate   = false 
 	and r.rolcanlogin = true
 	and r.rolname     = [rolename]
 order by
