@@ -9,40 +9,40 @@ Roles can own database objects (for example, tables and functions) and can assig
 
 ## Role Management Commands
 
-1. #### Create role:  
+1. Create role:  
 	`create role [rolename];`  
 	`create role [rolename] LOGIN;`  
 	`create user [rolename];`  this command includes the LOGIN privilege by default.  
 	`create role [rolename] password '[password_string]';`
 
-	###### Note  
+	### Note  
 
 	> Only roles that have the **LOGIN** attribute can be used as the initial role name for a database  
 	> connection.  
 	> A role with the LOGIN attribute can be considered the same as a “database user”.
 
-2. #### Remove an existing role:  
+2. Remove an existing role:  
 	`drop role [rolename];`  
 
-3. #### To determine the set of existing roles, examine the `pg_roles` system catalog:  
-`select * from pg_roles;`
+3. To determine the set of existing roles, examine the `pg_roles` system catalog:  
+	`select * from pg_roles;`
 
-2. #### Role Membership:  
-It is frequently convenient to group users together to ease management of privileges: that way, privileges  
-can be granted to, or revoked from, a group as a whole.  
-PostgreSQL this is done by creating a role that represents the group, and then granting membership in the  
-group role to individual user roles.
+2. Role Membership:  
+	It is frequently convenient to group users together to ease management of privileges: that way, privileges  
+	can be granted to, or revoked from, a group as a whole.  
+	PostgreSQL this is done by creating a role that represents the group, and then granting membership in the  
+	group role to individual user roles.
 
-#### To set up a group role:
+	#### To set up a group role:
 
-1. Create the role:  
-	`create role [rolename];`  
+	1. Create the role:  
+		`create role [rolename];`  
 
-	Typically a role being used as a group would not have the LOGIN attribute, though you can set it if you  wish.
+		Typically a role being used as a group would not have the LOGIN attribute, though you can set it if you  wish.
 
-2. Once the group role exists, you can add and remove members using the GRANT and REVOKE commands:  
-	`grant [group_role] to [rolename];`  
-	`revoke [group_role] from [rolename];`  
+	2. Once the group role exists, you can add and remove members using the GRANT and REVOKE commands:  
+		`grant [group_role] to [rolename];`  
+		`revoke [group_role] from [rolename];`  
 
 
 
