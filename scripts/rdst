@@ -1,0 +1,178 @@
+#!/bin/bash
+
+# Global Configuration ==============================================
+ENV_VARIABLES=(
+    "AWS_REGION"
+    "ENDPOINT_NAME"
+    "PORT"
+    "DATABASE"
+    "USERNAME"
+)
+
+CONFIG_FILE="$HOME/.rds_aurora_tool_env"
+
+
+
+# Processes ============================================================
+show_correct_sintax(){
+    echo "Usage: rdst [OPTION] [ARGUMENT]"
+    echo ""
+    echo "Options:"
+    echo "  --connect          Connect to Aurora PostgreSQL database."
+    echo "  --get-token        Generate and display a new authentication token."
+    echo "  --show-token       Display the current authentication token."
+    echo "  --reset-env        Reset all stored environment variables."
+    echo ""
+    echo "Arguments:"
+    echo "  --novalidate       Skip validation of required tools [aws-cli, psql]."
+    echo ""
+}
+
+validate_option(){
+    local valid_options=(
+        "--connect"
+        "--get-token"
+        "--show-token"
+        "--reset-env"
+    )
+
+    for opt in "${valid_options[@]}"; do
+        if [[ $opt = $1 ]]; then
+            return 0
+        fi
+    done
+
+    echo "Error: Invalid option: $1"
+    show_correct_sintax
+    exit 1
+}
+
+validate_argument(){
+    local valid_args=(
+        "--novalidate"
+    )
+
+    if [[ -z $1 ]]; then
+        return 0
+    fi
+    
+    for arg in "${valid_args[@]}"; do
+        if [[ $arg = $1 ]]; then
+            return 0
+        fi
+    done
+
+    echo "Error: Invalid argument: $1"
+    show_correct_sintax
+    exit 1
+}
+
+
+validate_requirements(){
+    if [[ $# -eq 0 ]]; then
+        for cmd in aws psql; do
+            if ! command -v $cmd &> /dev/null; then
+                echo "Error: $cmd is not installed."
+                exit 1
+            fi
+        done
+    fi
+}
+
+validate_environments(){
+    # 1. Load existing config if file exists
+    if [ -f "$CONFIG_FILE" ]; then
+        source "$CONFIG_FILE"
+    fi
+
+    for env in "${ENV_VARIABLES[@]}"; do
+        current_value="${!env}"
+
+        # Prepare prompt showing current value if available
+        prompt_msg="Enter value for $env"
+        if [ -n "$current_value" ]; then
+            prompt_msg="$prompt_msg [$current_value]"
+        fi
+
+        read -p "$prompt_msg: " input_value
+
+        # If user provided input, update the variable
+        if [ -n "$input_value" ]; then
+            export "$env"="$input_value"
+        fi
+    done
+
+    # 2. Save current values to the config file
+    # Overwrite or create the file
+    > "$CONFIG_FILE"
+    for env in "${ENV_VARIABLES[@]}"; do
+        echo "export $env=\"${!env}\"" >> "$CONFIG_FILE"
+    done
+
+    # Set restrictive permissions
+    chmod 600 "$CONFIG_FILE"
+}
+
+
+
+connect_to_aurora_db(){
+    validate_requirements $1
+    validate_environments
+    psql -h "$ENDPOINT_NAME" -p "$PORT" -U "$USERNAME" "$DATABASE"
+}
+
+get_new_token(){
+    validate_requirements $1
+    validate_environments
+    PGPASSWORD="$(aws rds generate-db-auth-token --hostname "$ENDPOINT_NAME" --port $PORT --region $AWS_REGION --username "$USERNAME")"
+    echo ""
+    echo $PGPASSWORD
+    echo ""
+}
+
+show_current_token(){
+    echo "Current authentication token:"
+    echo $PGPASSWORD
+    echo ""
+}
+
+reset_environment(){
+    rm -f "$CONFIG_FILE"
+
+    for env in "${ENV_VARIABLES[@]}"; do
+        unset "$env"
+    done
+    echo "Environment variables have been reset."
+}
+
+
+
+
+
+# init script =======================================================
+initialize_script(){
+    validate_option $1
+    validate_argument $2
+
+    case $1 in
+        "--connect")
+            connect_to_aurora_db $2
+            ;;
+        
+        "--get-token")
+            get_new_token $2
+            ;;
+        
+        "--show-token")
+            show_current_token
+            ;;
+        
+        "--reset-env")
+            reset_environment
+            ;;
+    esac
+
+    exit 0
+}
+initialize_script $@
+

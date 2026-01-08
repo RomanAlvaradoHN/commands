@@ -1,5 +1,9 @@
 # AWS-CLI
 
+## Install RDS Aurora Tool
+`echo "export PATH=$PATH:$(pwd)/scripts/" >> ~/.bashrc`
+
+
 ## Installation Steps
 
 Go to [this link](https://docs.aws.amazon.com/en_us/cli/latest/userguide/getting-started-install.html) to see the most recent information.
