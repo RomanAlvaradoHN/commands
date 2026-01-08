@@ -1,10 +1,5 @@
 # AWS-CLI
 
-## Install RDS Aurora Tool
-`echo 'export PATH="$PATH:'"$(pwd)/scripts"\" >> ~/.bashrc`  
-`source ~/.bashrc`
-
-
 ## Installation Steps
 
 Go to [this link](https://docs.aws.amazon.com/en_us/cli/latest/userguide/getting-started-install.html) to see the most recent information.
@@ -43,3 +38,8 @@ Go to [this link](https://docs.aws.amazon.com/en_us/cli/latest/userguide/getting
 | `aws-vault list`                                    | To see added profiles                       |
 | `aws-vault exec [profile-name] --duration=[hours]h` | Set up a profile session                    |
 | `aws-vault rm [profile-name]`                       | To delete a profile                         |
+
+## Install RDS Aurora Database Tool
+
+`echo 'export PATH="$PATH:'"$(pwd)/scripts"\" >> ~/.bashrc`  
+`source ~/.bashrc`
