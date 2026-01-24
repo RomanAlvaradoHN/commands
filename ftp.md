@@ -25,9 +25,9 @@ The `scp` command can be used to transfer files between machines over a secure, 
 ### Options
 | Command  | Meaning                                            |
 | :------  | :------                                            |
-| `-C`     | Enable compression.                                |
 | `-P`     | Specify the port to connect to on the remote host. |
-| `-v`     | Enable verbose mode.                               |
+| `-i`     | Specify an identity private key file.              |
+| `-r`     | Recursively copy entire directories.               |
 
 ### Operations
 | Operation  | Meaning                                          |
@@ -40,3 +40,4 @@ The `scp` command can be used to transfer files between machines over a secure, 
 | `lpwd`     | Show the current local directory                 |
 | `cd`       | Change remote directory                          |
 | `lcd`      | Change local directory                           |
+| `exit`     | Ends session                                     |
