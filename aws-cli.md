@@ -54,7 +54,7 @@ Go to [this link](https://github.com/ByteNess/aws-vault) to see the most recent 
     ```bash
     echo -e "\n\n" >> ~/.bashrc
     echo "#aws-vault configs ====================================" >> ~/.bashrc
-    echo "AWS_VAULT_BACKEND=file" >> ~/.bashrc
+    echo "export AWS_VAULT_BACKEND=file" >> ~/.bashrc
     echo "alias av='aws-vault'" >> ~/.bashrc
     echo "alias ave='aws-vault exec'" >> ~/.bashrc
     ```
