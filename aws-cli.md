@@ -42,15 +42,20 @@ Go to [this link](https://github.com/ByteNess/aws-vault) to see the most recent 
 
 1. Download the latest binary version from [this link.](https://github.com/byteness/aws-vault/releases/latest)
     ```bash
-    curl -fsSl https://github.com/ByteNess/aws-vault/releases/download/v7.9.3/aws-vault-linux-amd64 -o ~/aws/aws-vault
+    curl -L -o /usr/local/bin/aws-vault https://github.com/ByteNess/aws-vault/releases/download/v7.9.3/aws-vault-linux-amd64
     ```
 
-2. Add the environment variable:  
+2. Add execution rights
+    ```bash
+    sudo chmod +x /usr/local/bin/aws-vault
+    ```
+
+3. Add the environment variable:  
     ```bash
     echo "AWS_VAULT_BACKEND=file" >> ~/.bashrc
     ```
 
-3. create commands aliases (optional):  
+4. create commands aliases (optional):  
     ```bash
     echo "alias av='aws-vault'" >> ~/.bashrc
     echo "alias ave='aws-vault exec'" >> ~/.bashrc
