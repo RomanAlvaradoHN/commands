@@ -10,27 +10,41 @@ sudo apt remove awscli
 ```
 
 2. Download the compressed file:  
-`curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`
+```bash
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+```
 
 3. Unzip the downloaded file:  
-`unzip awscliv2.zip`
+```bash
+bashunzip awscliv2.zip
+```
 
 4. Install aws-cli:  
-`sudo ./aws/install`
+```bash
+sudo ./aws/install
+```
 
 5. Add the environment variable:  
-`echo "AWS_VAULT_BACKEND=file" >> ~/.bashrc`
+```bash
+echo "AWS_VAULT_BACKEND=file" >> ~/.bashrc
+```
 
 6. Restart the shell:  
-`source ~/.bashrc`
+```bash
+source ~/.bashrc
+```
 
 7. Verify installation:  
-`aws --version`
+```bash
+bashaws --version
+```
 
 8. create commands aliases (optional):  
-`echo "alias av='aws-vault' >> ~/.bashrc`  
-`echo "alias ave='aws-vault exec' >> ~/.bashrc`  
-`source ~/.bashrc`
+```bash
+echo "alias av='aws-vault' >> ~/.bashrc
+echo "alias ave='aws-vault exec' >> ~/.bashrc
+source ~/.bashrc
+```
 
 ## AWS-CLI COMMANDS
 
@@ -42,6 +56,7 @@ sudo apt remove awscli
 | `aws-vault rm [profile-name]`                       | To delete a profile                         |
 
 ## Install RDS Aurora Database Tool
-
-`echo 'export PATH="$PATH:'"$(pwd)/scripts"\" >> ~/.bashrc`  
-`source ~/.bashrc`
+```bash
+echo 'export PATH="$PATH:'"$(pwd)/scripts"\" >> ~/.bashrc
+source ~/.bashrc
+```
