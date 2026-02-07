@@ -17,7 +17,7 @@ Go to [this link](https://docs.aws.amazon.com/en_us/cli/latest/userguide/getting
 `sudo ./aws/install`
 
 5. Add the environment variable:  
-`export AWS_VAULT_BACKEND=file >> ~/.bashrc`
+`echo "AWS_VAULT_BACKEND=file" >> ~/.bashrc`
 
 6. Restart the shell:  
 `source ~/.bashrc`
