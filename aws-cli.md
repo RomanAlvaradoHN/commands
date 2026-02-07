@@ -16,7 +16,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 
 3. Unzip the downloaded file:  
 ```bash
-bashunzip awscliv2.zip
+unzip awscliv2.zip
 ```
 
 4. Install aws-cli:  
@@ -36,7 +36,7 @@ source ~/.bashrc
 
 7. Verify installation:  
 ```bash
-bashaws --version
+aws --version
 ```
 
 8. create commands aliases (optional):  
