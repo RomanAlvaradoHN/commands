@@ -41,8 +41,8 @@ aws --version
 
 8. create commands aliases (optional):  
 ```bash
-echo "alias av='aws-vault' >> ~/.bashrc
-echo "alias ave='aws-vault exec' >> ~/.bashrc
+echo "alias av='aws-vault'" >> ~/.bashrc
+echo "alias ave='aws-vault exec'" >> ~/.bashrc
 source ~/.bashrc
 ```
 
