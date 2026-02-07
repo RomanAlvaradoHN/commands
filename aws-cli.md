@@ -50,15 +50,16 @@ Go to [this link](https://github.com/ByteNess/aws-vault) to see the most recent 
     sudo chmod +x /usr/local/bin/aws-vault
     ```
 
-3. Add the environment variable:  
+3. Add the environment variables and aliases:  
     ```bash
+    echo "#aws-vault configs =================================" >> ~/.bashrc
     echo "AWS_VAULT_BACKEND=file" >> ~/.bashrc
-    ```
-
-4. create commands aliases (optional):  
-    ```bash
     echo "alias av='aws-vault'" >> ~/.bashrc
     echo "alias ave='aws-vault exec'" >> ~/.bashrc
+    ```
+
+4. Apply configs:  
+    ```bash    
     source ~/.bashrc
     ```
 
